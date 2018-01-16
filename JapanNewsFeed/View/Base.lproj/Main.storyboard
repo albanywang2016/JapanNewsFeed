@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nue-l9-cJo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Data Source-->
+        <scene sceneID="8ts-lN-25B">
+            <objects>
+                <viewController id="8oG-yq-1ZQ" customClass="NewsViewController" customModule="JapanNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eGN-oi-tr7" userLabel="News" customClass="UITableView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0S8-kr-kiG"/>
+                        <connections>
+                            <outlet property="dataSource" destination="8oG-yq-1ZQ" id="8UN-rv-bOV"/>
+                            <outlet property="delegate" destination="8oG-yq-1ZQ" id="cxd-Sb-pLP"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="dfx-Bp-clV"/>
+                    <connections>
+                        <segue destination="gSQ-JZ-Vfe" kind="show" identifier="ShowNewsSegue" id="IXI-Ni-EuR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xey-oP-GIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="969" y="663"/>
+        </scene>
+        <!--Entertainment Table View Controller-->
+        <scene sceneID="B7P-aj-ooS">
+            <objects>
+                <viewController id="0K5-KB-htm" customClass="EntertainmentTableViewController" customModule="JapanNewsFeed" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hy6-wu-qkG" userLabel="Entertainment" customClass="UITableView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="IL9-aL-n1u"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ld3-Bv-57W"/>
+                    <connections>
+                        <segue destination="gSQ-JZ-Vfe" kind="show" identifier="ShowEntertainmentSegue" id="25c-Ig-ep7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rj0-yZ-tDF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="1465"/>
+        </scene>
+        <!--Magazine Table View Controller-->
+        <scene sceneID="aEg-mU-H84">
+            <objects>
+                <viewController id="bZa-WQ-XIO" customClass="MagazineTableViewController" customModule="JapanNewsFeed" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0YN-pL-lLM" customClass="UITableView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZAN-ev-mZT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qrs-0x-eqr"/>
+                    <connections>
+                        <segue destination="gSQ-JZ-Vfe" kind="show" identifier="ShowMagazineSegue" id="XQh-h7-833"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tv2-pL-Vly" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="2212"/>
+        </scene>
+        <!--Video Table View Controller-->
+        <scene sceneID="FCu-Vy-k83">
+            <objects>
+                <viewController id="mUD-YR-zjr" customClass="VideoTableViewController" customModule="JapanNewsFeed" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nCL-L8-HPx" customClass="UITableView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Wmb-KK-Thg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cFq-SD-dEd"/>
+                    <connections>
+                        <segue destination="gSQ-JZ-Vfe" kind="show" identifier="ShowVideoSegue" id="kQI-83-42B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H41-bd-PpJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="969" y="3063"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="mWh-1w-lQW">
+            <objects>
+                <tabBarController id="Nue-l9-cJo" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RUv-Zj-TE0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="JLP-YE-RCF" kind="relationship" relationship="viewControllers" id="9sF-DL-Uuv"/>
+                        <segue destination="KID-zl-TK4" kind="relationship" relationship="viewControllers" id="aIb-DM-1pf"/>
+                        <segue destination="lAN-fL-kAu" kind="relationship" relationship="viewControllers" id="elC-cP-IoU"/>
+                        <segue destination="yQD-d3-O5t" kind="relationship" relationship="viewControllers" id="esu-KJ-PDW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ddf-Zw-UUY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1609" y="1729"/>
+        </scene>
+        <!--Show Detail View Controller-->
+        <scene sceneID="0Rm-hb-JqM">
+            <objects>
+                <viewController id="gSQ-JZ-Vfe" customClass="ShowDetailViewController" customModule="JapanNewsFeed" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7rx-gl-muW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7L-Ik-cxK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="y7L-Ik-cxK" firstAttribute="top" secondItem="Z8T-w3-nsR" secondAttribute="top" id="E6r-Mg-bQu"/>
+                            <constraint firstItem="Z8T-w3-nsR" firstAttribute="trailing" secondItem="y7L-Ik-cxK" secondAttribute="trailing" id="V08-AO-Y7y"/>
+                            <constraint firstItem="y7L-Ik-cxK" firstAttribute="leading" secondItem="Z8T-w3-nsR" secondAttribute="leading" id="edV-KT-ZqF"/>
+                            <constraint firstItem="Z8T-w3-nsR" firstAttribute="bottom" secondItem="y7L-Ik-cxK" secondAttribute="bottom" id="mc6-x5-rqG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Z8T-w3-nsR"/>
+                    </view>
+                    <connections>
+                        <outlet property="myWebView" destination="y7L-Ik-cxK" id="Xib-YE-2ag"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zTh-W5-tHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2623" y="2016"/>
+        </scene>
+        <!--国内・国際-->
+        <scene sceneID="LZi-6B-ZIi">
+            <objects>
+                <navigationController title="国内・国際" automaticallyAdjustsScrollViewInsets="NO" id="JLP-YE-RCF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="国内・国際" image="icons8-news-40" id="FUM-je-hBp"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ngR-54-Vmz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X2a-Xd-oxo">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="8oG-yq-1ZQ" kind="relationship" relationship="rootViewController" id="YhW-Pz-C3r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLV-vd-gXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="664"/>
+        </scene>
+        <!--エンタメ・スポーツ-->
+        <scene sceneID="4aQ-pI-F5o">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KID-zl-TK4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="エンタメ・スポーツ" image="icons8-disco-ball-40" id="P1T-1A-xPc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oJT-Ly-tka">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0K5-KB-htm" kind="relationship" relationship="rootViewController" id="XVq-ra-dG7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="blM-p5-YOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="1465"/>
+        </scene>
+        <!--生活・雑誌-->
+        <scene sceneID="qmw-Qr-ef4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lAN-fL-kAu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="生活・雑誌" image="icons8-magazine-40" id="prJ-Z0-FN8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Avr-Wc-CvP">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bZa-WQ-XIO" kind="relationship" relationship="rootViewController" id="R2d-Aq-AAM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nPy-Aq-lw1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="2212"/>
+        </scene>
+        <!--動画・漫画-->
+        <scene sceneID="Kvs-JM-gCU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yQD-d3-O5t" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="動画・漫画" image="icons8-tv-show-40" id="ADQ-9v-Jyk"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dpg-JL-WgA">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mUD-YR-zjr" kind="relationship" relationship="rootViewController" id="deJ-XQ-0tV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="daw-vj-M7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="3064"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-disco-ball-40" width="40" height="40"/>
+        <image name="icons8-magazine-40" width="40" height="40"/>
+        <image name="icons8-news-40" width="40" height="40"/>
+        <image name="icons8-tv-show-40" width="40" height="40"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kQI-83-42B"/>
+    </inferredMetricsTieBreakers>
+</document>
